@@ -1,0 +1,35 @@
+.gallery {
+    margin: 24px 156px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
+}
+
+/* фон модалки */
+
+/* ПІДКЛАДКА поверх сторінки (димка) */
+.sl-overlay {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Фон самої модалки (область навколо зображення) */
+.sl-wrapper {
+    background-color: rgba(90, 89, 101, 0.9) !important;
+}
+
+/* лічильник */
+.sl-wrapper .sl-counter {
+    color: #fff !important;
+}
+
+/* стрілки «prev/next» та кнопка закриття */
+.sl-wrapper .sl-navigation button,
+.sl-wrapper .sl-close {
+    color: #fff !important;
+}
