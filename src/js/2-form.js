@@ -3,7 +3,7 @@ const { email: inputEmail, message: textareaMessage } = form.elements;
 
 const key = 'feedback-form-state';
 
-const formData = { email: '', message: '' };
+let formData = { email: '', message: '' };
 
 noLoseDataByReloauding();
 
@@ -35,6 +35,8 @@ function onSubmit(event) {
 
   localStorage.removeItem(key);
   event.currentTarget.reset();
+
+  formData = { email: '', message: '' };
 }
 
 function noLoseDataByReloauding() {
@@ -44,4 +46,9 @@ function noLoseDataByReloauding() {
 
   inputEmail.value = savedEmail ? savedEmail : '';
   textareaMessage.value = savedMessage ? savedMessage : '';
+
+  formData = {
+    email: savedEmail || '',
+    message: savedMessage || '',
+  };
 }
